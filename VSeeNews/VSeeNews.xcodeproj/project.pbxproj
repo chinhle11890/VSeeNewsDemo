@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		231D11C42893CA8E0044FE9E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231D11C32893CA8E0044FE9E /* APIManager.swift */; };
+		231D11C72893CEB50044FE9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231D11C62893CEB50044FE9E /* Constants.swift */; };
+		23A038BD2892C981004C7E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A038BC2892C981004C7E68 /* AppDelegate.swift */; };
+		23A038BF2892C981004C7E68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A038BE2892C981004C7E68 /* SceneDelegate.swift */; };
+		23A038C12892C981004C7E68 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A038C02892C981004C7E68 /* NewsListViewController.swift */; };
+		23A038C42892C981004C7E68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A038C22892C981004C7E68 /* Main.storyboard */; };
+		23A038C62892C984004C7E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A038C52892C984004C7E68 /* Assets.xcassets */; };
+		23A038C92892C984004C7E68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A038C72892C984004C7E68 /* LaunchScreen.storyboard */; };
+		23A038D728939117004C7E68 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A038D628939117004C7E68 /* NewsDetailsViewController.swift */; };
+		23A038DB289391E6004C7E68 /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A038DA289391E6004C7E68 /* NewsListViewModel.swift */; };
+		23A038DF28939408004C7E68 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A038DE28939408004C7E68 /* News.swift */; };
+		23A038E228939548004C7E68 /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A038E128939548004C7E68 /* NewsListTableViewCell.swift */; };
+		9F6157D15A653314C0C43EB9 /* Pods_VSeeNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60E2F1C882766BF62AA3C9F /* Pods_VSeeNews.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		231D11C32893CA8E0044FE9E /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		231D11C62893CEB50044FE9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23A038B92892C981004C7E68 /* VSeeNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSeeNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23A038BC2892C981004C7E68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23A038BE2892C981004C7E68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		23A038C02892C981004C7E68 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		23A038C32892C981004C7E68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23A038C52892C984004C7E68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23A038C82892C984004C7E68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23A038CA2892C984004C7E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23A038D628939117004C7E68 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
+		23A038DA289391E6004C7E68 /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
+		23A038DE28939408004C7E68 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		23A038E128939548004C7E68 /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
+		358046A63D000F7202E2DCC6 /* Pods-VSeeNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSeeNews.debug.xcconfig"; path = "Target Support Files/Pods-VSeeNews/Pods-VSeeNews.debug.xcconfig"; sourceTree = "<group>"; };
+		BA0B043EAC7523FDFA1CD2B2 /* Pods-VSeeNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSeeNews.release.xcconfig"; path = "Target Support Files/Pods-VSeeNews/Pods-VSeeNews.release.xcconfig"; sourceTree = "<group>"; };
+		D60E2F1C882766BF62AA3C9F /* Pods_VSeeNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSeeNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23A038B62892C981004C7E68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F6157D15A653314C0C43EB9 /* Pods_VSeeNews.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F16AE9233C9F027C62D4753 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D60E2F1C882766BF62AA3C9F /* Pods_VSeeNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		231D11C52893CE920044FE9E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				231D11C62893CEB50044FE9E /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		23A038B02892C981004C7E68 = {
+			isa = PBXGroup;
+			children = (
+				23A038BB2892C981004C7E68 /* VSeeNews */,
+				23A038BA2892C981004C7E68 /* Products */,
+				A25A1655C8BA920E4C251FFC /* Pods */,
+				0F16AE9233C9F027C62D4753 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		23A038BA2892C981004C7E68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23A038B92892C981004C7E68 /* VSeeNews.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23A038BB2892C981004C7E68 /* VSeeNews */ = {
+			isa = PBXGroup;
+			children = (
+				23A038D228938EFF004C7E68 /* Resources */,
+				23A038D128938EEC004C7E68 /* Sources */,
+				23A038CA2892C984004C7E68 /* Info.plist */,
+			);
+			path = VSeeNews;
+			sourceTree = "<group>";
+		};
+		23A038D128938EEC004C7E68 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				231D11C52893CE920044FE9E /* Common */,
+				23A038DD289392F3004C7E68 /* Services */,
+				23A038DC289392EA004C7E68 /* Models */,
+				23A038D328938FC0004C7E68 /* Screens */,
+				23A038BC2892C981004C7E68 /* AppDelegate.swift */,
+				23A038BE2892C981004C7E68 /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		23A038D228938EFF004C7E68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23A038C22892C981004C7E68 /* Main.storyboard */,
+				23A038C52892C984004C7E68 /* Assets.xcassets */,
+				23A038C72892C984004C7E68 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		23A038D328938FC0004C7E68 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				23A038D5289390EF004C7E68 /* News Details */,
+				23A038D428939068004C7E68 /* News List */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		23A038D428939068004C7E68 /* News List */ = {
+			isa = PBXGroup;
+			children = (
+				23A038E028939529004C7E68 /* Cells */,
+				23A038C02892C981004C7E68 /* NewsListViewController.swift */,
+				23A038DA289391E6004C7E68 /* NewsListViewModel.swift */,
+			);
+			path = "News List";
+			sourceTree = "<group>";
+		};
+		23A038D5289390EF004C7E68 /* News Details */ = {
+			isa = PBXGroup;
+			children = (
+				23A038D628939117004C7E68 /* NewsDetailsViewController.swift */,
+			);
+			path = "News Details";
+			sourceTree = "<group>";
+		};
+		23A038DC289392EA004C7E68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23A038DE28939408004C7E68 /* News.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23A038DD289392F3004C7E68 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				231D11C32893CA8E0044FE9E /* APIManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		23A038E028939529004C7E68 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				23A038E128939548004C7E68 /* NewsListTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A25A1655C8BA920E4C251FFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				358046A63D000F7202E2DCC6 /* Pods-VSeeNews.debug.xcconfig */,
+				BA0B043EAC7523FDFA1CD2B2 /* Pods-VSeeNews.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23A038B82892C981004C7E68 /* VSeeNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23A038CD2892C984004C7E68 /* Build configuration list for PBXNativeTarget "VSeeNews" */;
+			buildPhases = (
+				808C7BDFD8482766AEC5130A /* [CP] Check Pods Manifest.lock */,
+				23A038B52892C981004C7E68 /* Sources */,
+				23A038B62892C981004C7E68 /* Frameworks */,
+				23A038B72892C981004C7E68 /* Resources */,
+				5DE5E5988B981F7988B1407F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VSeeNews;
+			productName = VSeeNews;
+			productReference = 23A038B92892C981004C7E68 /* VSeeNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23A038B12892C981004C7E68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					23A038B82892C981004C7E68 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 23A038B42892C981004C7E68 /* Build configuration list for PBXProject "VSeeNews" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23A038B02892C981004C7E68;
+			productRefGroup = 23A038BA2892C981004C7E68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23A038B82892C981004C7E68 /* VSeeNews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23A038B72892C981004C7E68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A038C92892C984004C7E68 /* LaunchScreen.storyboard in Resources */,
+				23A038C62892C984004C7E68 /* Assets.xcassets in Resources */,
+				23A038C42892C981004C7E68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DE5E5988B981F7988B1407F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VSeeNews/Pods-VSeeNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VSeeNews/Pods-VSeeNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VSeeNews/Pods-VSeeNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		808C7BDFD8482766AEC5130A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VSeeNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23A038B52892C981004C7E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				231D11C42893CA8E0044FE9E /* APIManager.swift in Sources */,
+				23A038DF28939408004C7E68 /* News.swift in Sources */,
+				23A038D728939117004C7E68 /* NewsDetailsViewController.swift in Sources */,
+				23A038C12892C981004C7E68 /* NewsListViewController.swift in Sources */,
+				23A038DB289391E6004C7E68 /* NewsListViewModel.swift in Sources */,
+				23A038BD2892C981004C7E68 /* AppDelegate.swift in Sources */,
+				23A038E228939548004C7E68 /* NewsListTableViewCell.swift in Sources */,
+				23A038BF2892C981004C7E68 /* SceneDelegate.swift in Sources */,
+				231D11C72893CEB50044FE9E /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		23A038C22892C981004C7E68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23A038C32892C981004C7E68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		23A038C72892C984004C7E68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23A038C82892C984004C7E68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23A038CB2892C984004C7E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23A038CC2892C984004C7E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23A038CE2892C984004C7E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 358046A63D000F7202E2DCC6 /* Pods-VSeeNews.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 53QYT53M8G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VSeeNews/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VSee.VSeeNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23A038CF2892C984004C7E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0B043EAC7523FDFA1CD2B2 /* Pods-VSeeNews.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 53QYT53M8G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VSeeNews/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VSee.VSeeNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23A038B42892C981004C7E68 /* Build configuration list for PBXProject "VSeeNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A038CB2892C984004C7E68 /* Debug */,
+				23A038CC2892C984004C7E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23A038CD2892C984004C7E68 /* Build configuration list for PBXNativeTarget "VSeeNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A038CE2892C984004C7E68 /* Debug */,
+				23A038CF2892C984004C7E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23A038B12892C981004C7E68 /* Project object */;
+}
