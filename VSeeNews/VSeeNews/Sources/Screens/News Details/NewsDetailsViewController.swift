@@ -15,6 +15,8 @@ class NewsDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Article"
 
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)

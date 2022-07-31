@@ -7,8 +7,6 @@ target 'VSeeNews' do
 
   # Pods for VSeeNews
   pod 'Alamofire'
-  pod 'RealmSwift'
   pod 'SDWebImage', '~> 5.0'
-  pod 'ObjectMapper', '~> 3.5'
   
 end

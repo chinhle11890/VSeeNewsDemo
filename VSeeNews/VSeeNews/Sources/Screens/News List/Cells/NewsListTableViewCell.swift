@@ -15,9 +15,9 @@ class NewsListTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     
     func setNews(news: Article) {
-//        newsImageView.sd_setImage(with: URL(string: news.urlToImage))
+        newsImageView.sd_setImage(with: URL(string: news.urlToImage))
         titleLabel.text = news.title
-//        descriptionLabel.text = news.newsDescription
-//        timeLabel.text = news.publishedAt
+        descriptionLabel.text = news.newsDescription
+        timeLabel.text = news.publishedAt
     }
 }

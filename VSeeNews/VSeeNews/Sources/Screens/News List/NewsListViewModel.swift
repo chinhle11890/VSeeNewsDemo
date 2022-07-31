@@ -7,21 +7,46 @@
 
 import UIKit
 
+protocol NewsListViewModelDelegate: class {
+    func reloadData()
+}
+
 class NewsListViewModel: NSObject {
     var newsList: [Article] = []
-    private var currentPage: Int = 0
+    var currentPage: Int = -1
+    
+    weak var delegate: NewsListViewModelDelegate?
+    
+    func loadLocalData() {
+        let news = LocalDataManager.fetchFirstPageResults()
+        if news.count > 0 {
+            newsList.append(contentsOf: news)
+            self.delegate?.reloadData()
+        }
+    }
     
     func fetchNews(loadingMore: Bool = false) {
-        if loadingMore {
-            // Increase the current page and request
-            currentPage += 1
-        } else {
-            // Reset current page and list if reloading
-            currentPage = 0
-            newsList = []
+        if !loadingMore {
+            // Reset current page if reloading
+            currentPage = -1
         }
-        APIManager.fetchNews(page: currentPage) { news in
+        // Increase the current page and request
+        currentPage += 1
+        
+        APIManager.fetchNews(page: currentPage) { (isLastPage, news) in
+            if isLastPage {
+                // Reset the current page and used to check for loading more
+                self.currentPage = -1
+            }
+            
+            // Reset list if reloading
+            if !loadingMore {
+                self.newsList = []
+            }
+            
+            // Add the results and reload table
             self.newsList.append(contentsOf: news)
+            self.delegate?.reloadData()
         }
     }
 }

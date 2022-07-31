@@ -16,10 +16,17 @@ class NewsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Articles"
+        
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
         
+        viewModel.delegate = self
+        viewModel.loadLocalData()
         viewModel.fetchNews()
     }
     
@@ -50,20 +57,27 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
         let news = viewModel.newsList[indexPath.row]
         cell.setNews(news: news)
         
+        // Check for loading more when reaching the last cell
+        if indexPath.row == viewModel.newsList.count - 1, viewModel.currentPage >= 0 {
+            viewModel.fetchNews(loadingMore: true)
+        }
+        
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let news = viewModel.newsList[indexPath.row]
-//        if !news.url.isEmpty {
-//            performSegue(withIdentifier: "showNewsDetails", sender: news.url)
-//        }
+        if !news.url.isEmpty {
+            performSegue(withIdentifier: "showNewsDetails", sender: news.url)
+        }
+    }
+}
+
+extension NewsListViewController: NewsListViewModelDelegate {
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 
