@@ -21,7 +21,7 @@ class NewsListViewModel: NSObject {
             newsList = []
         }
         APIManager.fetchNews(page: currentPage) { news in
-            newsList.append(contentsOf: news)
+            self.newsList.append(contentsOf: news)
         }
     }
 }

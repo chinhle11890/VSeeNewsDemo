@@ -10,11 +10,7 @@ import Foundation
 import Alamofire
 
 class APIManager: NSObject {
-    internal static func fetchNews(page: Int, response: ([Article]) -> Void) {
-//        if progress {
-//            LoadingPopup.sharedInstance.startAnimation()
-//        }
-        
+    internal static func fetchNews(page: Int, completion: @escaping ([Article]) -> Void) {
         var headers = HTTPHeaders()
         headers["Content-Type"] = "application/json"
         headers["X-Api-Key"] = API_KEY
@@ -27,11 +23,11 @@ class APIManager: NSObject {
         let request = AF.request(url, parameters: params, headers: headers)
         request.validate().responseDecodable(of: NewsResult.self) { response in
             guard let newsResult = response.value else { return }
-//            let articles = newsResult.articles
+            let articles = newsResult.articles
             if page == 0 {
                 // Cache data of the first page
             }
-//            response(articles)
+            completion(articles)
         }
     }
 }
