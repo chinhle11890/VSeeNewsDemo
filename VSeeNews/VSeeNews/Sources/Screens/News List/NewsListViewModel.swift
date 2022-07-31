@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol NewsListViewModelDelegate: class {
+protocol NewsListViewModelDelegate: AnyObject {
     func reloadData()
 }
 
