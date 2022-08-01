@@ -8,7 +8,7 @@
 import UIKit
 
 protocol NewsListViewModelDelegate: AnyObject {
-    func reloadData()
+    func updateUI()
 }
 
 class NewsListViewModel: NSObject {
@@ -18,10 +18,10 @@ class NewsListViewModel: NSObject {
     weak var delegate: NewsListViewModelDelegate?
     
     func loadLocalData() {
-        let news = LocalDataManager.fetchFirstPageResults()
+        let news = LocalDataManager.loadFirstPageResults()
         if news.count > 0 {
             newsList.append(contentsOf: news)
-            self.delegate?.reloadData()
+            self.delegate?.updateUI()
         }
     }
     
@@ -35,7 +35,7 @@ class NewsListViewModel: NSObject {
         
         APIManager.fetchNews(page: currentPage) { (isLastPage, news) in
             if isLastPage {
-                // Reset the current page and used to check for loading more
+                // Reset the current page, will use to check for loading more
                 self.currentPage = -1
             }
             
@@ -44,9 +44,9 @@ class NewsListViewModel: NSObject {
                 self.newsList = []
             }
             
-            // Add the results and reload table
+            // Add the results and update UI
             self.newsList.append(contentsOf: news)
-            self.delegate?.reloadData()
+            self.delegate?.updateUI()
         }
     }
 }

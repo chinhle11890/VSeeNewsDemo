@@ -76,7 +76,7 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension NewsListViewController: NewsListViewModelDelegate {
-    func reloadData() {
+    func updateUI() {
         tableView.reloadData()
     }
 }

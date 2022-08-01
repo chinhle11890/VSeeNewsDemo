@@ -18,6 +18,7 @@ class APIManager: NSObject {
         var params = Parameters()
         params["country"] = "us"
         params["page"] = page
+        params["pageSize"] = ITEM_PER_PAGE
         
         guard let url = URL(string: API_URL) else { return }
         let request = AF.request(url, parameters: params, headers: headers)

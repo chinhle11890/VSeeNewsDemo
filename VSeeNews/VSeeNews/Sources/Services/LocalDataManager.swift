@@ -13,19 +13,19 @@ class LocalDataManager: NSObject {
             // Create JSON Encoder
             let encoder = JSONEncoder()
 
-            // Encode Note
+            // Encode News
             let data = try encoder.encode(news)
 
             // Write/Set Data
-            UserDefaults.standard.set(data, forKey: "news")
+            UserDefaults.standard.set(data, forKey: STORAGE_KEY)
 
         } catch {
             print("Unable to Encode Array of News (\(error))")
         }
     }
     
-    internal static func fetchFirstPageResults() -> [Article] {
-        if let data = UserDefaults.standard.data(forKey: "news") {
+    internal static func loadFirstPageResults() -> [Article] {
+        if let data = UserDefaults.standard.data(forKey: STORAGE_KEY) {
             do {
                 // Create JSON Decoder
                 let decoder = JSONDecoder()
@@ -34,7 +34,7 @@ class LocalDataManager: NSObject {
                 let news = try decoder.decode([Article].self, from: data)
                 return news
             } catch {
-                print("Unable to Decode Notes (\(error))")
+                print("Unable to Decode Array of News (\(error))")
             }
         }
         
